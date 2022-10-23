@@ -40,10 +40,6 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 20px;
   flex: 1.6;
-
-  /* ${media.burger} {
-    gap: 5px;
-  } */
 `;
 
 export const Description = styled.div`
@@ -123,7 +119,7 @@ export const Description = styled.div`
 
     ${media.burger} {
       margin-bottom: 0;
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 `;

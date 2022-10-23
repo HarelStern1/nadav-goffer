@@ -8,6 +8,7 @@ export interface SectionProps {
   padding?: string;
   align?: string;
   justify?: string;
+  wrap?: boolean;
   column?: boolean;
   id?: string;
 }

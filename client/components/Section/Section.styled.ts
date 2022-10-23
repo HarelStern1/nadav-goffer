@@ -36,12 +36,14 @@ export const Content = styled.div<{
   align?: string;
   justify?: string;
   column?: boolean;
+  wrap?: boolean;
 }>`
   position: relative;
   max-width: 1440px;
   display: flex;
   align-items: ${({ align }) => (align ? align : "center")};
   justify-content: ${({ justify }) => (justify ? justify : "center")};
+  flex-wrap: ${({ wrap }) => (wrap ? "wrap" : "no-wrap")};
 
   ${media.desktop} {
     margin: 0 auto;

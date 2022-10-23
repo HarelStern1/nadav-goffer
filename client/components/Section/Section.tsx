@@ -10,6 +10,7 @@ const Section: FC<SectionProps> = ({
   backgroundOpacity,
   align,
   justify,
+  wrap,
   column,
   id,
 }) => {
@@ -21,7 +22,7 @@ const Section: FC<SectionProps> = ({
       backgroundImage={backgroundImage}
       backgroundOpacity={backgroundOpacity}
     >
-      <Content align={align} justify={justify} column={column}>
+      <Content wrap={wrap} align={align} justify={justify} column={column}>
         {children}
       </Content>
     </StyledSection>
