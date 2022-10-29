@@ -18,10 +18,10 @@ const Hero: FC = () => {
       backgroundOpacity={0.7}
     >
       <Content language={language}>
-        <h2>{data[language].title}</h2>
-        <p>{data[language].accent}</p>
+        <h2>{data.en.title}</h2>
+        <p>{data.en.accent}</p>
         <Button href="/#consultation" stroke="true" language={language}>
-          {data[language].button}
+          {data.en.button}
         </Button>
       </Content>
     </Section>
