@@ -5,14 +5,14 @@ import media from "../../utils/media";
 export const StyledButton = styled.button<{
   stroke?: string;
   responsive?: boolean;
+  language: string;
 }>`
-  font-family: "pt serif", times new roman, Times, serif;
   padding: 14px 30px;
   min-width: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: ${({ language }) => (language === "he" ? "16px" : "18px")};
   color: ${colors.white};
   border: 2px solid ${colors.yellow};
   border: ${({ stroke }) => (stroke ? `2px solid ${colors.yellow}` : "none")};
@@ -28,8 +28,9 @@ export const StyledButton = styled.button<{
     if (responsive) {
       return css`
         ${media.burger} {
-          font-size: 14px;
-          padding: 10px 30px;
+          font-size: 16px;
+          padding: 15px 30px;
+          width: 95%;
         }
       `;
     }

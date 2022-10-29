@@ -3,6 +3,12 @@ import Button from "../../components/Button/Button";
 import colors from "../../utils/colors";
 import media from "../../utils/media";
 
+export const SectionWrapper = styled.div`
+  ${media.mobile} {
+    margin-bottom: 80px;
+  }
+`;
+
 export const Wrapper = styled.div`
   z-index: 1;
   position: absolute;
@@ -30,7 +36,7 @@ export const Wrapper = styled.div`
   }
 
   ${media.phone} {
-    height: 340px;
+    height: 360px;
     width: 90vw;
   }
 `;
@@ -57,7 +63,7 @@ export const Description = styled.div`
   }
 
   ${media.small} {
-    padding: 25px 20px;
+    padding: 0 25px 20px;
   }
 
   &::after {
@@ -106,14 +112,14 @@ export const Description = styled.div`
     margin: 0;
 
     ${media.burger} {
-      font-size: 25px;
+      font-size: 26px;
     }
   }
 
   > p {
-    font-size: 14px;
+    font-size: 15px;
     margin: 0;
-    line-height: 24px;
+    line-height: 26px;
     max-width: 380px;
     margin-bottom: 15px;
 
@@ -138,6 +144,6 @@ export const ButtonWrapper = styled.div`
   padding-left: 60px;
 
   ${media.small} {
-    padding-left: 20px;
+    padding-left: 5%;
   }
 `;

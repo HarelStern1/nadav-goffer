@@ -16,7 +16,7 @@ const Achievements: FC = () => {
     >
       {[0, 1, 2, 3].map((_, idx) => {
         return (
-          <Card>
+          <Card key={idx}>
             <GoLaw size={40} color={colors.yellow} />
             <h2>1450</h2>
             <p>Happy Clients</p>

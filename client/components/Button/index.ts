@@ -5,4 +5,5 @@ export interface ButtonProps {
   stroke: string;
   responsive?: boolean;
   href: string;
+  language: string;
 }

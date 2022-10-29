@@ -1,10 +1,14 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import Button from "../../components/Button/Button";
 import Section from "../../components/Section/Section";
 import bg from "../../assets/backgrounds/hero-bg.jpg";
 import { Content } from "./Hero.styled";
+import { useAppContext } from "../../context/AppContext/AppContext";
+import { data } from "./data";
 
 const Hero: FC = () => {
+  const { language } = useAppContext();
+
   return (
     <Section
       justify={"center"}
@@ -13,11 +17,11 @@ const Hero: FC = () => {
       backgroundImage={bg.src}
       backgroundOpacity={0.7}
     >
-      <Content>
-        <h2>Nadav Goffer</h2>
-        <p>Lawyer</p>
-        <Button href="/#consultation" stroke="true">
-          Request a Free Consulation
+      <Content language={language}>
+        <h2>{data[language].title}</h2>
+        <p>{data[language].accent}</p>
+        <Button href="/#consultation" stroke="true" language={language}>
+          {data[language].button}
         </Button>
       </Content>
     </Section>

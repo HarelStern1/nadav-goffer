@@ -1,5 +1,7 @@
+import { Data } from "../../sections/Hero";
+
 export interface AppContextType {
-  language: string;
+  language: keyof Data;
   setLanguage: (arg: string) => void;
   changeLanguage: (arg: string) => void;
 }
