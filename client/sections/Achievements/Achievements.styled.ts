@@ -8,7 +8,7 @@ export const Card = styled.div`
   justify-content: center;
   align-items: center;
   color: ${colors.white};
-  gap: 10px;
+  gap: 15px;
   padding: 10px 0;
 
   > h2 {

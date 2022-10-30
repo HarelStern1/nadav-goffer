@@ -8,7 +8,7 @@ const PhoneIcon: FC = () => {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#7A7A7A"
+      stroke="#9f9f9f"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"

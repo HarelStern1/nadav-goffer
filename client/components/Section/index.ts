@@ -10,5 +10,6 @@ export interface SectionProps {
   justify?: string;
   wrap?: boolean;
   column?: boolean;
+  direction?: string;
   id?: string;
 }

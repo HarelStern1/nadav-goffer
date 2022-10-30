@@ -37,6 +37,7 @@ export const Content = styled.div<{
   justify?: string;
   column?: boolean;
   wrap?: boolean;
+  direction?: string;
 }>`
   position: relative;
   max-width: 1440px;
@@ -44,6 +45,7 @@ export const Content = styled.div<{
   align-items: ${({ align }) => (align ? align : "center")};
   justify-content: ${({ justify }) => (justify ? justify : "center")};
   flex-wrap: ${({ wrap }) => (wrap ? "wrap" : "no-wrap")};
+  flex-direction: ${({ direction }) => (direction ? direction : "row")};
 
   ${media.desktop} {
     margin: 0 auto;

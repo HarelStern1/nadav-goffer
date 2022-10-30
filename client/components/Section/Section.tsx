@@ -12,6 +12,7 @@ const Section: FC<SectionProps> = ({
   justify,
   wrap,
   column,
+  direction,
   id,
 }) => {
   return (
@@ -22,7 +23,13 @@ const Section: FC<SectionProps> = ({
       backgroundImage={backgroundImage}
       backgroundOpacity={backgroundOpacity}
     >
-      <Content wrap={wrap} align={align} justify={justify} column={column}>
+      <Content
+        wrap={wrap}
+        align={align}
+        justify={justify}
+        column={column}
+        direction={direction}
+      >
         {children}
       </Content>
     </StyledSection>
