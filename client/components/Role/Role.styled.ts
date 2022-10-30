@@ -1,12 +1,14 @@
 import styled from "styled-components";
+import colors from "../../utils/colors";
 import media from "../../utils/media";
 
 export const Wrapper = styled.div`
   margin: 30px 60px;
-  max-width: 200px;
+  max-width: 220px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  color: ${colors.darkGray};
 
   ${media.mobile} {
     height: auto;
@@ -23,5 +25,6 @@ export const Wrapper = styled.div`
   > p {
     margin: 0;
     margin-top: auto;
+    color: ${colors.yellow};
   }
 `;

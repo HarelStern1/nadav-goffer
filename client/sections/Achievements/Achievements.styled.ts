@@ -24,6 +24,7 @@ export const Card = styled.div`
     margin: 0;
     font-size: 20px;
     color: ${colors.lightGrayText};
+    margin-top: auto;
 
     ${media.mobile} {
       font-size: 18px;

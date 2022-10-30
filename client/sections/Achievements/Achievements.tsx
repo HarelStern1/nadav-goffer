@@ -4,6 +4,7 @@ import colors from "../../utils/colors";
 import bg from "../../assets/backgrounds/hero-background2.jpg";
 import { Card } from "./Achievements.styled";
 import { GoLaw } from "react-icons/go";
+import { achievments } from "./data";
 
 const Achievements: FC = () => {
   return (
@@ -14,12 +15,12 @@ const Achievements: FC = () => {
       backgroundOpacity={0.3}
       column
     >
-      {[0, 1, 2, 3].map((_, idx) => {
+      {achievments.map((a, idx) => {
         return (
           <Card key={idx}>
-            <GoLaw size={40} color={colors.yellow} />
-            <h2>1450</h2>
-            <p>Happy Clients</p>
+            {a.icon}
+            <h2>{a.title}</h2>
+            <p>{a.accent}</p>
           </Card>
         );
       })}
