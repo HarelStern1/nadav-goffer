@@ -48,7 +48,7 @@ const Contact: FC = () => {
         <Column>
           <ReCaptcha
             data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-            data-size="invisible"
+            // data-size="invisible"
           ></ReCaptcha>
           <Greeting>
             <h2>Get in Touch</h2>
