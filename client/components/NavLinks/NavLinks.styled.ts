@@ -31,7 +31,7 @@ export const StyledLink = styled.a<{ active: number }>`
     height: 2px;
     width: 0px;
     border-radius: 4px;
-    background-color: ${colors.blue};
+    background-color: ${colors.yellow};
   }
 
   &:hover::after {
@@ -39,13 +39,13 @@ export const StyledLink = styled.a<{ active: number }>`
   }
 
   &:hover {
-    color: ${colors.blue};
+    color: ${colors.darkGray};
   }
 
   ${({ active }) => {
     return css`
       &:nth-child(${active + 1}) {
-        color: ${colors.blue};
+        color: ${colors.darkGray};
         &::after {
           width: 100%;
         }

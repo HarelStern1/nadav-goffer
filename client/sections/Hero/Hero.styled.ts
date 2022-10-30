@@ -16,7 +16,7 @@ export const Content = styled.div<{ language: string }>`
   }
 
   > h2 {
-    font-size: ${({ language }) => (language === "he" ? "70px" : "80px")};
+    font-size: ${({ language }) => (language === "he" ? "80px" : "90px")};
     margin: 0;
 
     ${media.mobile} {
@@ -24,7 +24,7 @@ export const Content = styled.div<{ language: string }>`
     }
   }
   > p {
-    font-size: ${({ language }) => (language === "he" ? "40px" : "60px")};
+    font-size: ${({ language }) => (language === "he" ? "60px" : "60px")};
     margin: 0 0 20px 0;
 
     ${media.mobile} {

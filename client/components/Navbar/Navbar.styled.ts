@@ -5,7 +5,6 @@ import media from "../../utils/media";
 export const Wrapper = styled.nav<{
   shadow: boolean;
 }>`
-  font-family: sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +30,7 @@ export const Wrapper = styled.nav<{
 `;
 
 export const Logo = styled.a`
-  color: ${colors.blue};
+  color: ${colors.darkGray};
   font-size: 17px;
   cursor: pointer;
 

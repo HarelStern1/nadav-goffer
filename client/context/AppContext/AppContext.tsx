@@ -1,10 +1,10 @@
 import React, { FC, useState } from "react";
-import { AppContextType } from "./index";
+import { AppContextType, Language } from "./index";
 
 export const AppContext = React.createContext<AppContextType | null>(null);
 
 const AppProvider: FC<{ children: JSX.Element }> = ({ children }) => {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState<Language>("en");
 
   const changeLanguage = (current: string) => {
     if (current === "en") {

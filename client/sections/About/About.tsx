@@ -14,6 +14,7 @@ import {
 import Button from "../../components/Button/Button";
 import Image from "next/image";
 import { useAppContext } from "../../context/AppContext/AppContext";
+import { data } from "./data";
 
 const About: FC = () => {
   const { language } = useAppContext();
@@ -27,24 +28,20 @@ const About: FC = () => {
         backgroundColor={colors.blue}
         backgroundImage={bg.src}
       >
-        <Wrapper>
+        <Wrapper language={language}>
           <Container>
-            <Description>
-              <h2>About Me</h2>
-              <p>
-                When you place your case in the hands of our lawyers and
-                paralegals, you outcome. When you place your case in the hands
-                of our lawyers and paralegals, you outcome.
-              </p>
+            <Description language={language}>
+              <h2>{data[language].title}</h2>
+              <p>{data[language].accent}</p>
             </Description>
-            <ButtonWrapper>
+            <ButtonWrapper language={language}>
               <Button
                 language={language}
                 responsive
                 stroke={"true"}
                 href={"/#consultation"}
               >
-                Requset a Free Consulation
+                {data[language].button}
               </Button>
             </ButtonWrapper>
           </Container>

@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import Button from "../../components/Button/Button";
 import Section from "../../components/Section/Section";
 import bg from "../../assets/backgrounds/hero-bg.jpg";
@@ -18,10 +18,10 @@ const Hero: FC = () => {
       backgroundOpacity={0.7}
     >
       <Content language={language}>
-        <h2>{data.en.title}</h2>
-        <p>{data.en.accent}</p>
+        <h2>{data[language].title}</h2>
+        <p>{data[language].accent}</p>
         <Button href="/#consultation" stroke="true" language={language}>
-          {data.en.button}
+          {data[language].button}
         </Button>
       </Content>
     </Section>
