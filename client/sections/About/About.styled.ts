@@ -190,6 +190,17 @@ export const ButtonWrapper = styled.div<{ language: string }>`
   }}
 
   ${media.small} {
-    padding-left: 5%;
+    ${({ language }) => {
+      if (language === "he") {
+        return css`
+          padding-left: 5%;
+        `;
+      } else {
+        return css`
+          padding: 0;
+          padding-right: 5%;
+        `;
+      }
+    }}
   }
 `;

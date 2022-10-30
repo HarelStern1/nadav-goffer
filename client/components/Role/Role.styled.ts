@@ -2,12 +2,11 @@ import styled from "styled-components";
 import media from "../../utils/media";
 
 export const Wrapper = styled.div`
-  margin: 60px;
+  margin: 30px 60px;
   max-width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 200px;
 
   ${media.mobile} {
     height: auto;
@@ -15,6 +14,7 @@ export const Wrapper = styled.div`
 
   > h2 {
     margin: 10px 0;
+    font-size: 26px;
   }
   > h4 {
     margin: 10px 0;

@@ -7,7 +7,7 @@ const Role: FC<RoleProps> = ({ company, location, role, years }) => {
     <Wrapper>
       <h2>
         {company}
-        {location && ","} <span>{location}</span>
+        {/* {location && ","} <span>{location}</span> */}
       </h2>
       <h4>{role}</h4>
       <p>{years}</p>
