@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState } from "react";
 import Section from "../../components/Section/Section";
 import { useCaptcha } from "../../hooks/usecaptcha";
 import useMediaQuery from "../../hooks/useMediaQuery";
@@ -15,6 +15,7 @@ import {
   Greeting,
   Info,
   ButtonsWrapper,
+  Message,
 } from "./Contact.styled";
 
 const Contact: FC = () => {
@@ -26,16 +27,15 @@ const Contact: FC = () => {
     phone: "",
     message: "",
   });
-
+  const [success, setSuccess] = useState("");
   const token = useCaptcha();
-  console.log(token);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     // send post request to /submit with user & token
-    const res = submitData(user, token);
-    console.log(res);
+    const { data } = await submitData(user, token);
+    setSuccess(data === "success" ? "Message recieved successfuly!" : "");
   };
 
   return (
@@ -43,7 +43,6 @@ const Contact: FC = () => {
       id="consultation"
       backgroundColor={colors.contact}
       justify="space-around"
-      column
     >
       <Form>
         <Column>
@@ -93,6 +92,7 @@ const Contact: FC = () => {
             <Button type="submit" onClick={handleSubmit}>
               Submit
             </Button>
+            <Message>{success}</Message>
           </ButtonsWrapper>
         </Column>
       </Form>

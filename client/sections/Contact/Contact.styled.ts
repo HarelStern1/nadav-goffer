@@ -91,6 +91,7 @@ export const Button = styled.button`
   color: ${colors.white};
   background-color: ${colors.yellow};
   cursor: pointer;
+  height: 50px;
 `;
 
 export const Greeting = styled.div`
@@ -147,7 +148,17 @@ export const Info = styled.div`
 export const ButtonsWrapper = styled.div`
   position: relative;
   display: flex;
-  gap: 100px;
+  gap: 50px;
+  align-items: center;
 `;
 
 export const ReCaptcha = styled.div``;
+
+export const Message = styled.p`
+  margin: 0;
+  color: ${colors.darkGray};
+
+  ${media.mobile} {
+    font-size: 15px;
+  }
+`;
