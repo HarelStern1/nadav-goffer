@@ -169,7 +169,7 @@ export const ReCaptcha = styled.div``;
 
 export const Message = styled.p<{ language: string }>`
   margin: 5px 0;
-  color: #1dbc1d;
+  color: ${colors.darkGray};
   text-align: ${({ language }) => (language === "en" ? "right" : null)};
 
   ${media.mobile} {

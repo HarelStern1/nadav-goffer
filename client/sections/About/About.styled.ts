@@ -151,7 +151,7 @@ export const Description = styled.div<{ language: string }>`
   }
 
   > p {
-    font-size: 15px;
+    font-size: 16px;
     margin: 0;
     line-height: 26px;
     max-width: 380px;

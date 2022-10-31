@@ -46,7 +46,7 @@ const About: FC = () => {
             </ButtonWrapper>
           </Container>
           <Figure>
-            <Image src={nadav} height={"400px"} width={"400px"} />
+            <Image src={nadav} height={"450px"} width={"450px"} />
           </Figure>
         </Wrapper>
       </Section>
