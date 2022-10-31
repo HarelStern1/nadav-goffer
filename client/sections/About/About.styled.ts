@@ -39,7 +39,7 @@ export const Wrapper = styled.div<{ language: string }>`
   }
 
   ${media.phone} {
-    height: 380px;
+    height: auto;
     width: 90vw;
   }
 `;
