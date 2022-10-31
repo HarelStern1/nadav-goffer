@@ -11,11 +11,11 @@ const Button: FC<ButtonProps> = ({
   language,
 }) => {
   return (
-    <Link href={href}>
+    <a href={href}>
       <StyledButton responsive={responsive} stroke={stroke} language={language}>
         {children}
       </StyledButton>
-    </Link>
+    </a>
   );
 };
 
