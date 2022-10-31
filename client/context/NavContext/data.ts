@@ -30,7 +30,7 @@ export const links: Links = [
   },
 
   {
-    href: "/#contact",
+    href: "/#consultation",
     en: {
       title: "Contact",
     },

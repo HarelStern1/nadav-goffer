@@ -21,15 +21,14 @@ const NavLinks: FC = () => {
     <Wrapper language={language}>
       {links.map((link, idx) => {
         return (
-          <Link key={idx} href={link.href}>
-            <StyledLink
-              active={active}
-              onClick={() => handleClick(idx)}
-              href={link.href}
-            >
-              {language === "he" ? link.en.title : link.he.title}
-            </StyledLink>
-          </Link>
+          <StyledLink
+            key={idx}
+            active={active}
+            onClick={() => handleClick(idx)}
+            href={link.href}
+          >
+            {language === "he" ? link.en.title : link.he.title}
+          </StyledLink>
         );
       })}
     </Wrapper>
