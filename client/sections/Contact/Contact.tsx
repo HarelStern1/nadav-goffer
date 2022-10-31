@@ -17,8 +17,12 @@ import {
   ButtonsWrapper,
   Message,
 } from "./Contact.styled";
+import spinner from "../../assets/gifs/spinner.svg";
+import Image from "next/image";
+import { useAppContext } from "../../context/AppContext/AppContext";
 
 const Contact: FC = () => {
+  const { language } = useAppContext();
   const isMobile = useMediaQuery(767);
   const [user, setUser] = useState({
     firstName: "",
@@ -27,15 +31,19 @@ const Contact: FC = () => {
     phone: "",
     message: "",
   });
-  const [success, setSuccess] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
   const token = useCaptcha();
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     // send post request to /submit with user & token
+    setSuccess(false);
+    setLoading(true);
     const { data } = await submitData(user, token);
-    setSuccess(data === "success" ? "Message recieved successfuly!" : "");
+    setLoading(false);
+    setSuccess(data === "success" ? true : false);
   };
 
   return (
@@ -43,66 +51,100 @@ const Contact: FC = () => {
       id="consultation"
       backgroundColor={colors.contact}
       justify="space-around"
+      direction={language === "he" ? "row" : "row-reverse"}
+      align="flex-start"
     >
       <Form>
         <Column>
           <ReCaptcha
             data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-            // data-size="invisible"
+            data-size="invisible"
           ></ReCaptcha>
-          <Greeting>
-            <h2>Get in Touch</h2>
-            <p>Leave a message and i'll get back to you</p>
+          <Greeting language={language}>
+            <h2>{language === "he" ? "Get In Touch" : "צור קשר"}</h2>
+            <p>
+              {language === "he"
+                ? "Leave a message and i'll get back to you"
+                : "השאירו לי הודעה ואחזור אליכם בהקדם"}
+            </p>
           </Greeting>
-          <Row>
+          <Row language={language}>
             <Input
+              language={language}
               type={"text"}
-              placeholder="First Name"
+              placeholder={language === "he" ? "First Name" : "שם פרטי"}
               value={user.firstName}
               onChange={(e) => setUser({ ...user, firstName: e.target.value })}
             />
             <Input
+              language={language}
               type={"text"}
-              placeholder="Last Name"
+              placeholder={language === "he" ? "Last Name" : "שם משפחה"}
               value={user.lastName}
               onChange={(e) => setUser({ ...user, lastName: e.target.value })}
             />
           </Row>
-          <Row>
+          <Row language={language}>
             <Input
+              language={language}
               type={"email"}
-              placeholder="Email"
+              placeholder={language === "he" ? "Email" : "מייל"}
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
             />
             <Input
+              language={language}
               type={"text"}
-              placeholder="Phone"
+              placeholder={language === "he" ? "Phone" : "טלפון"}
               value={user.phone}
               onChange={(e) => setUser({ ...user, phone: e.target.value })}
             />
           </Row>
           <LongInput
+            language={language}
             type={"text"}
-            placeholder="Message"
+            placeholder={language === "he" ? "Message" : "הודעה"}
             value={user.message}
             onChange={(e) => setUser({ ...user, message: e.target.value })}
           />
-          <ButtonsWrapper>
+          <ButtonsWrapper language={language}>
             <Button type="submit" onClick={handleSubmit}>
-              Submit
+              {language === "he" ? "Send" : "שליחה"}
             </Button>
-            <Message>{success}</Message>
+            {loading && (
+              <Image src={spinner.src} width={"35px"} height={"35px"} />
+            )}
           </ButtonsWrapper>
+          <Message language={language}>
+            {success && language === "he"
+              ? "Message recieved successfuly!"
+              : success && language === "en"
+              ? "!ההודעה נשלחה בהצלחה"
+              : ""}
+          </Message>
         </Column>
       </Form>
       {!isMobile ? (
-        <Info>
-          <h2>{`Contact
-        Information`}</h2>
-          <h3>Email : nadavgof@gmail.com</h3>
-          <h3>Phone : 054-649-3839</h3>
-          <h3>Location : Ramat-Gan / Tel-Aviv</h3>
+        <Info language={language}>
+          <h2>
+            {language === "he"
+              ? `Contact
+        Information`
+              : "פרטי התקשרות"}
+          </h2>
+          <h3>
+            {language === "he"
+              ? "Email : nadavgof@gmail.com"
+              : "nadavgof@gmail.com :מייל"}
+          </h3>
+          <h3>
+            {language === "he" ? "Phone : 054-649-3839" : "054-649-3839 :טלפון"}
+          </h3>
+          <h3>
+            {language === "he"
+              ? "Location : Ramat-Gan / Tel-Aviv"
+              : "מיקום : רמת - גן  /  תל - אביב "}
+          </h3>
         </Info>
       ) : (
         <></>

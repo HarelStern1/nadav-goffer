@@ -27,7 +27,7 @@ export const Wrapper = styled.section`
 
 export const Form = styled.form``;
 
-export const Input = styled.input`
+export const Input = styled.input<{ language: string }>`
   width: 50%;
   height: 38px;
   padding: 16px 0;
@@ -37,6 +37,8 @@ export const Input = styled.input`
   font-size: 15px;
   outline: none;
   color: ${colors.lightGrayText};
+  text-align: ${({ language }) => (language === "en" ? "right" : null)};
+  padding-right: ${({ language }) => (language === "en" ? "10px" : null)};
 
   ${media.mobile} {
     font-size: 13px;
@@ -44,7 +46,7 @@ export const Input = styled.input`
   }
 `;
 
-export const LongInput = styled.input`
+export const LongInput = styled.input<{ language: string }>`
   width: 100%;
   height: 100px;
   padding: 16px 0;
@@ -55,6 +57,8 @@ export const LongInput = styled.input`
   font-size: 15px;
   outline: none;
   color: ${colors.lightGrayText};
+  text-align: ${({ language }) => (language === "en" ? "right" : null)};
+  padding-right: ${({ language }) => (language === "en" ? "10px" : null)};
 
   ${media.mobile} {
     font-size: 13px;
@@ -62,9 +66,11 @@ export const LongInput = styled.input`
   }
 `;
 
-export const Row = styled.div`
+export const Row = styled.div<{ language: string }>`
   display: flex;
   gap: 12px;
+  flex-direction: ${({ language }) =>
+    language === "en" ? "row-reverse" : null};
 `;
 
 export const Column = styled.div`
@@ -94,15 +100,17 @@ export const Button = styled.button`
   height: 50px;
 `;
 
-export const Greeting = styled.div`
+export const Greeting = styled.div<{ language: string }>`
   display: flex;
   flex-direction: column;
   gap: 4px;
+  align-self: ${({ language }) => (language === "en" ? "flex-end" : null)};
 
   > h2 {
     color: ${colors.yellow};
     font-size: 32px;
     margin: 0;
+    text-align: ${({ language }) => (language === "en" ? "right" : null)};
   }
   > p {
     font-size: 16px;
@@ -112,16 +120,19 @@ export const Greeting = styled.div`
   }
 `;
 
-export const Info = styled.div`
+export const Info = styled.div<{ language: string }>`
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: ${({ language }) => (language === "en" ? "flex-end" : null)};
 
   > h2 {
     color: ${colors.yellow};
     font-size: 32px;
     margin: 0;
     white-space: pre-line;
+    text-align: ${({ language }) => (language === "en" ? "right" : null)};
 
     ${media.phone} {
       white-space: normal;
@@ -145,18 +156,21 @@ export const Info = styled.div`
   }
 `;
 
-export const ButtonsWrapper = styled.div`
+export const ButtonsWrapper = styled.div<{ language: string }>`
   position: relative;
   display: flex;
   gap: 50px;
   align-items: center;
+  flex-direction: ${({ language }) =>
+    language === "en" ? "row-reverse" : null};
 `;
 
 export const ReCaptcha = styled.div``;
 
-export const Message = styled.p`
-  margin: 0;
-  color: ${colors.darkGray};
+export const Message = styled.p<{ language: string }>`
+  margin: 5px 0;
+  color: #1dbc1d;
+  text-align: ${({ language }) => (language === "en" ? "right" : null)};
 
   ${media.mobile} {
     font-size: 15px;
