@@ -16,7 +16,7 @@ export const Card = styled.div`
     font-size: 45px;
 
     ${media.mobile} {
-      font-size: 38px;
+      font-size: 34px;
     }
   }
 

@@ -5,17 +5,19 @@ import bg from "../../assets/backgrounds/hero-bg.jpg";
 import { Content } from "./Hero.styled";
 import { useAppContext } from "../../context/AppContext/AppContext";
 import { data } from "./data";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Hero: FC = () => {
   const { language } = useAppContext();
+  const isMobile = useMediaQuery(767);
 
   return (
     <Section
       justify={"center"}
-      padding={"14vmax 10vw"}
+      padding={!isMobile ? "14vmax 10vw" : "7vmax 10vw 14vmax 10vw"}
       backgroundColor={"#333"}
       backgroundImage={bg.src}
-      backgroundOpacity={0.7}
+      backgroundOpacity={!isMobile ? 0.7 : 0.5}
     >
       <Content language={language}>
         <h2>{data[language].title}</h2>

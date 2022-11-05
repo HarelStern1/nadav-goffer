@@ -98,6 +98,10 @@ export const Button = styled.button`
   background-color: ${colors.yellow};
   cursor: pointer;
   height: 50px;
+
+  ${media.mobile} {
+    font-size: 15px;
+  }
 `;
 
 export const Greeting = styled.div<{ language: string }>`

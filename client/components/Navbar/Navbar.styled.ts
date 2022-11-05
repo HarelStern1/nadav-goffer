@@ -22,6 +22,7 @@ export const Wrapper = styled.nav<{
 
   ${media.mobile} {
     padding: 0 30px;
+    height: 80px;
   }
 
   @media (min-width: 2000px) {

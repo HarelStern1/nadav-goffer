@@ -36,6 +36,7 @@ export const Wrapper = styled.div<{ language: string }>`
   ${media.mobile} {
     height: 320px;
     width: 90vw;
+    padding: 30px 10px;
   }
 
   ${media.phone} {
