@@ -101,6 +101,8 @@ export const Button = styled.button`
 
   ${media.mobile} {
     font-size: 15px;
+    font-weight: 300;
+    height: 44px;
   }
 `;
 
