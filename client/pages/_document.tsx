@@ -4,8 +4,8 @@ import Document, {
   Html,
   Main,
   NextScript,
+  Head,
 } from "next/document";
-import Head from "next/head";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -35,5 +35,18 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+  render(): JSX.Element {
+    return (
+      <Html>
+        <Head>
+          <script src="https://www.google.com/recaptcha/api.js?render=6Lc8qWkiAAAAAK7OEvq1AIssBCdpFdfIx11tfDCx"></script>
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }

@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
 import Section from "../../components/Section/Section";
-import { useCaptcha } from "../../hooks/usecaptcha";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import colors from "../../utils/colors";
 import { submitData } from "../../utils/functions/submitData";
@@ -20,7 +19,6 @@ import {
 import spinner from "../../assets/gifs/spinner.svg";
 import Image from "next/image";
 import { useAppContext } from "../../context/AppContext/AppContext";
-import Head from "next/head";
 
 const Contact: FC = () => {
   const { language } = useAppContext();
@@ -57,9 +55,6 @@ const Contact: FC = () => {
 
   return (
     <>
-      <Head>
-        <script src="https://www.google.com/recaptcha/api.js?render=6Lc8qWkiAAAAAK7OEvq1AIssBCdpFdfIx11tfDCx"></script>
-      </Head>
       <Section
         id="consultation"
         backgroundColor={colors.contact}
