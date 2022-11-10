@@ -19,6 +19,7 @@ import {
 import spinner from "../../assets/gifs/spinner.svg";
 import Image from "next/image";
 import { useAppContext } from "../../context/AppContext/AppContext";
+import Head from "next/head";
 
 const Contact: FC = () => {
   const { language } = useAppContext();
@@ -36,12 +37,12 @@ const Contact: FC = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    (window as any).grecaptcha.ready(() => {
+    (window as any).grecaptcha.ready(function () {
       (window as any).grecaptcha
         .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string, {
           action: "submit",
         })
-        .then(async (token: string) => {
+        .then(async function (token: string) {
           // Send form value as well as token to the server
           setSuccess(false);
           setLoading(true);
@@ -55,6 +56,9 @@ const Contact: FC = () => {
 
   return (
     <>
+      <Head>
+        <script src="https://www.google.com/recaptcha/api.js?render=6Lc8qWkiAAAAAK7OEvq1AIssBCdpFdfIx11tfDCx"></script>
+      </Head>
       <Section
         id="consultation"
         backgroundColor={colors.contact}

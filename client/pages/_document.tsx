@@ -41,9 +41,7 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html>
-        <Head>
-          <Script src="https://www.google.com/recaptcha/api.js?render=6Lc8qWkiAAAAAK7OEvq1AIssBCdpFdfIx11tfDCx"></Script>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
