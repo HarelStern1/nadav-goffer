@@ -6,6 +6,8 @@ import Document, {
   NextScript,
   Head,
 } from "next/document";
+import Script from "next/script";
+
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -40,7 +42,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script src="https://www.google.com/recaptcha/api.js?render=6Lc8qWkiAAAAAK7OEvq1AIssBCdpFdfIx11tfDCx"></script>
+          <Script src="https://www.google.com/recaptcha/api.js?render=6Lc8qWkiAAAAAK7OEvq1AIssBCdpFdfIx11tfDCx"></Script>
         </Head>
         <body>
           <Main />
