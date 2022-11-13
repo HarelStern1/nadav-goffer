@@ -4,19 +4,20 @@ import media from "../../utils/media";
 
 export const Wrapper = styled.div`
   margin: 30px 60px;
-  max-width: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   color: ${colors.darkGray};
-
+  text-align: center;
+  border-radius: 10px;
+  height: 240px;
   ${media.mobile} {
     height: auto;
   }
 
   > h2 {
     margin: 10px 0;
-    font-size: 26px;
+    font-size: 24px;
   }
   > h4 {
     margin: 10px 0;

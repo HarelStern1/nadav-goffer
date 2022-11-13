@@ -2,15 +2,11 @@ import { FC } from "react";
 import { RoleProps } from ".";
 import { Wrapper } from "./Role.styled";
 
-const Role: FC<RoleProps> = ({ company, location, role, years }) => {
+const Role: FC<RoleProps> = ({ company, role }) => {
   return (
     <Wrapper>
-      <h2>
-        {company}
-        {/* {location && ","} <span>{location}</span> */}
-      </h2>
+      <h2>{company}</h2>
       <h4>{role}</h4>
-      <p>{years}</p>
     </Wrapper>
   );
 };

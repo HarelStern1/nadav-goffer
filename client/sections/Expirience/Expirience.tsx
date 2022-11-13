@@ -9,15 +9,7 @@ const Expirience: FC = () => {
     <Section id="expirience" justify="center">
       <Grid>
         {jobs.map((job, idx) => {
-          return (
-            <Role
-              key={idx}
-              company={job.company}
-              location={job.location}
-              role={job.role}
-              years={job.years}
-            />
-          );
+          return <Role key={idx} company={job.company} role={job.role} />;
         })}
       </Grid>
     </Section>

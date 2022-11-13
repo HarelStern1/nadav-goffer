@@ -3,8 +3,8 @@ import colors from "../../utils/colors";
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 310px;
-  height: 300px;
+  width: 290px;
+  height: 280px;
   padding: 67px 40px 61px;
   display: flex;
   justify-content: center;

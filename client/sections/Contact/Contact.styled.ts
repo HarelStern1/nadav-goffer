@@ -33,7 +33,7 @@ export const Input = styled.input<{ language: string }>`
   padding: 16px 0;
   padding-left: 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 15px;
   outline: none;
   color: ${colors.lightGrayText};
@@ -53,7 +53,7 @@ export const LongInput = styled.input<{ language: string }>`
   padding-bottom: 60px;
   padding-left: 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 15px;
   outline: none;
   color: ${colors.lightGrayText};
@@ -90,7 +90,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   width: 30%;
   padding: 14px 20px;
   font-size: 17px;

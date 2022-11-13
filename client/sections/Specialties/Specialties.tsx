@@ -9,7 +9,7 @@ const Specialties: FC = () => {
 
   return (
     <Section
-      padding={!isMobile ? "7vmax 10vw 10vmax 10vw" : "7vmax 10vw 150px 10vw"}
+      padding={!isMobile ? "7vmax 7vw 10vmax 7vw" : "7vmax 10vw 150px 10vw"}
       justify={"space-around"}
       column
     >

@@ -19,4 +19,9 @@ export const specialties: Specialties[] = [
     title: "מיסוי עקיף",
     body: "ייעוץ מס כולל במגוון סוגיות הקשורות למס ערך מוסף, מכס, מס קנייה ובלו",
   },
+  {
+    icon: <BsBriefcase size={40} color={colors.yellow} />,
+    title: "משפט מסחרי",
+    body: "הסכמי שירותים, הסכמי הפצה, הסכמי שכירות וכו׳",
+  },
 ];
