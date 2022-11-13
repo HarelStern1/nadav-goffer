@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 
   > h2 {
     margin: 10px 0;
+    margin-top: 40px;
     font-size: 24px;
   }
   > h4 {
