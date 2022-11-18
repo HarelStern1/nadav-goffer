@@ -16,7 +16,7 @@ export const jobs = [
   },
   {
     img: biu.src,
-    imgWidth: "140px",
+    imgWidth: "150px",
     company: "LL.B תואר ראשון במשפטים",
     role: "אוניברסיטת בר אילן (2010)",
   },

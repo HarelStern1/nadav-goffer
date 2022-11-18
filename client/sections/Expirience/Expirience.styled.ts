@@ -5,6 +5,7 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: 33% 33% 33%;
   /* gap: 40px; */
+  margin-top: 60px;
 
   ${media.burger} {
     grid-template-columns: 50% 50%;
